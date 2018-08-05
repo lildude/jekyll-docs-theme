@@ -110,17 +110,21 @@ The ui object will contain all the settings in regards to the aesthetics of the 
 
 ```yaml
 ui:
+  brand_color: "#563d7c"
   header:
     color1: "#080331"
     color2: "#673051"
     trianglify: true
+    hide_nav: false
 ```
 
 {:.table}
 | field | description |
 | ----- | ----------- |
+| `brand_color` | The color used for the navigation and sidebar links |
 | `color1` & `color2` | The two colors that will create the gradient of the page header |
 | `trianglify` | When set to true, the page header will be a generated triangular pattern |
+| `hide_nav` | Hides the navbar at the top of the page when set to true |
 
 ## Analytics
 
