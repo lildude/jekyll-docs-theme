@@ -67,7 +67,7 @@
         <ul class="bs-docs-footer-links muted">
             {% assign version = site.project.version | default: site.github.latest_release.tag_name | remove_first: 'v' %}
             {% if version != "" %}
-                <li>Currently v{{ version }}</li>
+                <li>Latest v{{ version }}</li>
             {% endif %}
             {% for l in site.links.footer %}
                 <li>&middot;</li>

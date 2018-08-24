@@ -8,7 +8,7 @@
             </p>
             {% assign version = site.project.version | default: site.github.latest_release.tag_name | remove_first: 'v' %}
             {% if version != "" %}
-                <p class="version">Currently v{{ version }}</p>
+                <p class="version">Latest v{{ version }}</p>
             {% endif %}
         </div>
     </div>
