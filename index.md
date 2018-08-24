@@ -11,15 +11,17 @@ Jekyll Docs Theme is provided as a theme for writing documentation for your proj
 
 This theme is still in development but is kept fairly stable; just note, there are a lot things yet to come.
 
+This fork has also been extended by @lildude.
+
 # Installation
 
-Add this line to your Jekyll site's Gemfile:
+Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
 gem "jekyll-docs-theme"
 ```
 
-And add this line to your Jekyll site's _config.yml:
+And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
 theme: jekyll-docs-theme
@@ -37,17 +39,25 @@ Or install it yourself as:
 $ gem install jekyll-docs-theme
 ```
 
-<div class="alert alert-warning" markdown="1">
-**Warning:** Custom [themes are not supported on GitHub Pages](https://pages.github.com/themes/) at the time of writing this, so you may either build your site on another platform or simply fork this repo and build upon it as you would any other theme.
-</div>
+## GitHub Pages
+
+You can use this theme on your GitHub Pages sites using the new [remote themes](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) functionality by adding the following to your site's `_config.yml`:
+
+```yaml
+remote_theme: lildude/jekyll-docs-theme
+```
 
 # Configuration Options
 
-A sample [`_config.yml`](https://github.com/allejo/jekyll-docs-theme/blob/master/docs/_config.yml) file is available with all of the available fields; documentation and more information for each of those fields is available below.
+A sample [`_config.yml`](https://github.com/lildude/jekyll-docs-theme/blob/master/docs/_config.yml) file is available with all of the available fields; documentation and more information for each of those fields is available below.
 
 ## Project
 
 The project object can be specified with information related to the software this; this information will appear on the homepage's jumbotron area.
+
+If you are hosting your site on GitHub Pages, this information will be drawn from the [GitHub repository metadata](https://help.github.com/articles/repository-metadata-on-github-pages/) for the site using the theme.
+
+You can overwrite this with:
 
 ```yaml
 project:
@@ -110,6 +120,7 @@ The ui object will contain all the settings in regards to the aesthetics of the 
 
 ```yaml
 ui:
+  favicon: favicon.png
   brand_color: "#563d7c"
   header:
     color1: "#080331"
@@ -121,6 +132,7 @@ ui:
 {:.table}
 | field | description |
 | ----- | ----------- |
+| `favicon` | The path to a favicon file |
 | `brand_color` | The color used for the navigation and sidebar links |
 | `color1` & `color2` | The two colors that will create the gradient of the page header |
 | `trianglify` | When set to true, the page header will be a generated triangular pattern |
@@ -145,8 +157,10 @@ Options for configuring buttons to "like", "tweet" or "star" this site with the 
 ```yaml
 social:
   github:
-    user: allejo
-    repo: jekyll-docs-theme
+    enabled: true
+    # Uncomment these parameters override those obtained from the GitHub repository metadata
+    #user: allejo
+    #repo: jekyll-docs-theme
   twitter:
     enabled: false
     via:

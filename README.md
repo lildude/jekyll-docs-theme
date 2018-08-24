@@ -8,7 +8,26 @@ This theme is still in development but is kept fairly stable; just note, there a
 
 ![Theme Screenshot](https://raw.githubusercontent.com/allejo/jekyll-docs-theme/master/screenshot.png)
 
+## @lildude's Modifications
+
+I've started to tweak and enhance this theme for my own purposes and am still deciding how I'll upstream some of all of these changes. For the moment, these are the changes I've made in this fork:
+
+- Detailed how you can use this theme with GitHub Pages' new [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) functionality.
+- Default to using [GitHub repository metadata](https://help.github.com/articles/repository-metadata-on-github-pages/) where it makes sense to. These can be overwritten by the original configuration options which are commented out in this fork.
+- Added the ability to
+    - configure a "brand color" - this is the primary color of the brand and used for the sidebar and navbar links.
+    - configure a favicon
+    - hide the top navigation bar
+
 ## Installation
+
+To use on GitHub Pages sites, add this to your `_config.yml`:
+
+```yaml
+remote_theme: lildude/jekyll-docs-theme
+```
+
+-or-
 
 Fork this project
 
@@ -38,9 +57,10 @@ Or install it yourself as:
 
 To set up your environment to develop this theme, run `bundle install`.
 
-To develop on this theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`.
+To develop on this theme, run `bundle exec jekyll serve --config _config.yml,_config-dev.yml` and open your browser at `http://localhost:4000`.
+
+The `_config-dev.yml` file loads the [jekyll-github-metadata](https://github.com/jekyll/github-metadata) plugin so you can develop using the `site.github` parameters available on GitHub Pages.
 
 ## License
 
 The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
