@@ -1,0 +1,5 @@
+# Use the jekyll-github-metadata plugin when developing locally to mimic the
+# GitHub Pages functionality.
+repository: allejo/jekyll-docs-theme
+plugins:
+  - "jekyll-github-metadata"

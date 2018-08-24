@@ -1,11 +1,6 @@
 # name of the software
 title: Jekyll Docs Theme
 
-# Uncomment when testing locally using the jekyll-github-metadata as used by GitHub Pages
-repository: allejo/jekyll-docs-theme
-plugins:
-  - "jekyll-github-metadata"
-
 # These values override those obtained via the jekyll-github-metadata plugin when hosted on GitHub Pages
 #project:
     #version: 0.1.0
