@@ -10,7 +10,7 @@ This theme is still in development but is kept fairly stable; just note, there a
 
 ## @lildude's Modifications
 
-I've started to tweak and enhance this theme for my own purposes and am still deciding how I'll upstream some of all of these changes. For the moment, these are the changes I've made in this fork:
+I've started to tweak and enhance this theme for my own purposes and am still deciding how I'll upstream some of all of these changes. For the moment, these are some of the changes I've made in this fork:
 
 - Detailed how you can use this theme with GitHub Pages' new [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) functionality.
 - Default to using [GitHub repository metadata](https://help.github.com/articles/repository-metadata-on-github-pages/) where it makes sense to. These can be overwritten by the original configuration options which are commented out in this fork.
@@ -19,6 +19,9 @@ I've started to tweak and enhance this theme for my own purposes and am still de
     - configure a favicon
     - hide the top navigation bar
 - Added a new syntax theme to override the default.
+- A few other tweaks.
+
+A full list of differences can be seen in the diff at [allejo:master...lildude:master](https://github.com/allejo/jekyll-docs-theme/compare/master...lildude:master).
 
 ## Installation
 
