@@ -2,17 +2,17 @@
     <div class="container">
         <div class="bs-docs-social">
             <ul class="bs-docs-social-buttons">
-                {% if site.social.github.user and site.social.github.repo %}
+                {% if site.social.github.enabled %}
                     <li>
                         <iframe class="github-btn"
-                                src="https://ghbtns.com/github-btn.html?user={{ site.social.github.user }}&amp;repo={{ site.social.github.repo }}&amp;type=watch&amp;count=true"
+                                src="https://ghbtns.com/github-btn.html?user={{ site.social.github.user | default: site.github.owner_name }}&amp;repo={{ site.social.github.repo | default: site.github.repository_name }}&amp;type=watch&amp;count=true"
                                 width="90"
                                 height="20"
                                 title="Star on GitHub"></iframe>
                     </li>
                     <li>
                         <iframe class="github-btn"
-                                src="https://ghbtns.com/github-btn.html?user={{ site.social.github.user }}&amp;repo={{ site.social.github.repo }}&amp;type=fork&amp;count=true"
+                                src="https://ghbtns.com/github-btn.html?user={{ site.social.github.user | default: site.github.owner_name }}&amp;repo={{ site.social.github.repo | default: site.github.repository_name }}&amp;type=fork&amp;count=true"
                                 width="90"
                                 height="20"
                                 title="Fork on GitHub"></iframe>
@@ -25,7 +25,7 @@
                            data-url="{{ site.github.url }}"
                            data-count="horizontal"
                            data-via="{{ site.social.twitter.via }}"
-                           data-text="{{ site.title }}"
+                           data-text="{{ site.title | default: site.github.project_title }}"
                            data-hashtags="{{ site.social.twitter.hash }}">Tweet</a>
                     </li>
                 {% endif %}
@@ -65,8 +65,9 @@
         </p>
 
         <ul class="bs-docs-footer-links muted">
-            {% if site.project.version %}
-                <li>Currently v{{ site.project.version }}</li>
+            {% assign version = site.project.version | default: site.github.latest_release.tag_name | remove_first: 'v' %}
+            {% if version != "" %}
+                <li>Currently v{{ version }}</li>
             {% endif %}
             {% for l in site.links.footer %}
                 <li>&middot;</li>

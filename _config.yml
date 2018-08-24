@@ -1,9 +1,15 @@
 # name of the software
-name: Jekyll Docs Theme
+title: Jekyll Docs Theme
 
-project:
-    version: 0.1.0
-    download_url: https://github.com/allejo/jekyll-docs-theme/releases
+# Uncomment when testing locally using the jekyll-github-metadata as used by GitHub Pages
+repository: allejo/jekyll-docs-theme
+plugins:
+  - "jekyll-github-metadata"
+
+# These values override those obtained via the jekyll-github-metadata plugin when hosted on GitHub Pages
+#project:
+    #version: 0.1.0
+    #download_url: https://github.com/allejo/jekyll-docs-theme/releases
 
 license:
     software: MIT License
@@ -33,8 +39,10 @@ ui:
 
 social:
     github:
-        user: allejo
-        repo: jekyll-docs-theme
+        enabled: true
+        # Repository information will be used if these aren't set
+        #user: allejo
+        #repo: jekyll-docs-theme
     twitter:
         enabled: false
         via:

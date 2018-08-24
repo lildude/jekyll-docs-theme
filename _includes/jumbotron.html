@@ -1,13 +1,14 @@
 {% if page.homepage %}
     <div class="bs-docs-masthead" id="jumbotron-header">
         <div class="container">
-            <h1 class="home-title">{{ site.title }}</h1>
+            <h1 class="home-title">{{ site.title | default: site.github.project_title }}</h1>
             <p class="lead">{{ page.description }}</p>
             <p class="lead">
-                <a href="{{ site.project.download_url }}" class="btn btn-outline-inverse btn-lg">Download</a>
+                <a href="{{ site.project.download_url | default: site.github.latest_release.html_url }}" class="btn btn-outline-inverse btn-lg">Download</a>
             </p>
-            {% if site.project.version %}
-                <p class="version">Currently v{{ site.project.version }}</p>
+            {% assign version = site.project.version | default: site.github.latest_release.tag_name | remove_first: 'v' %}
+            {% if version != "" %}
+                <p class="version">Currently v{{ version }}</p>
             {% endif %}
         </div>
     </div>
