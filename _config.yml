@@ -23,10 +23,13 @@ links:
         url: https://github.com/allejo/jekyll-docs-theme/issues?state=open
 
 ui:
+    favicon: favicon.png
+    brand_color: "#563d7c"
     header:
         color1: "#080331"
         color2: "#673051"
         trianglify: true
+        hide_nav: false
 
 social:
     github:
