@@ -18,6 +18,7 @@ I've started to tweak and enhance this theme for my own purposes and am still de
     - configure a "brand color" - this is the primary color of the brand and used for the sidebar and navbar links.
     - configure a favicon
     - hide the top navigation bar
+- Added a new syntax theme to override the default.
 
 ## Installation
 
